@@ -1,4 +1,15 @@
 .author__ColContainer {
   padding-top: 2rem;
   padding-bottom: 2rem;
+
+  .author__AuthorLink {
+    text-decoration: none;
+    color: #212529;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+      color: #D3A533;
+    }
+  }
 }

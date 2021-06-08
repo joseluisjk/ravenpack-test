@@ -12,8 +12,6 @@
   }
 }
 
-
-
 .postList__Row {
   align-items: center;
   flex-direction: column;
@@ -30,7 +28,7 @@
   
       &:focus, &:hover {
         text-decoration: none;
-        color: #0085A1;
+        color: #D3A533;
         opacity: 0.8;
         cursor: pointer;
       }
@@ -64,30 +62,4 @@
       }
     }
   }
-}
-
-.postList__Modal_Body {
-  overflow: auto;
-  max-height: 75vh;
-
-  ul {
-    list-style: none;
-    padding-right: 40px;
-
-    li {
-      margin-bottom: 3rem;
-      border-bottom: 1px solid black;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 0.8;
-        color: #0085A1;
-      }
-    
-    }
-  }
-}
-
-.postList__Modal_Footer {
-  justify-content: center;
 }

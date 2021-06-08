@@ -1,18 +1,26 @@
-import React from 'react';
-import { useLocation, useParams } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import { getUser } from '../../actions/post';
 
 import Header from '../../components/Header';
 import PostList from '../../components/Post/PostList';
 
 const Profile = () => {
-  const location = useLocation().state;
+  const params = useParams();
+  const [name, setName] = useState("")
+
+  useEffect(() => {
+    getUser(params.id).then((items) => {
+      setName(items.name)
+    })
+  }, [params])
 
   return (
     <>
       <Header
-        title={`${location.name} posts`}
+        title={`${name} posts`}
       />
-      <PostList postsPerpage={5} userId={useParams().id} isProfile />
+      <PostList postsPerpage={5} userId={params.id} isProfile />
     </>
   );
 }

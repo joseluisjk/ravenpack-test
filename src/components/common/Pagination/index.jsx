@@ -1,4 +1,5 @@
 import React from 'react';
+import isEqual from 'lodash/isEqual';
 import { Pagination } from 'react-bootstrap';
 import styles from './index.module.scss';
 
@@ -21,17 +22,17 @@ const CommonPagination = (props) => {
 
   return (
     <Pagination size="sm" className={styles.pagination__Pagination}>
-      <Pagination.Prev onClick={() => { prev() }} />
+      <Pagination.Prev className={styles.pagination__Pagination_ArrowItem} onClick={() => { prev() }} />
       {
         numberArray.map(num => {
           return (
-            <Pagination.Item onClick={() => { jump(num) }} key={num} active={num === props.currentPage}>
+            <Pagination.Item className={styles.pagination__Pagination_Item} onClick={() => { jump(num) }} key={num} active={isEqual(num, props.currentPage)}>
               {num}
             </Pagination.Item>
           )
         })
       }
-      <Pagination.Next onClick={() => { next() }} />
+      <Pagination.Next className={styles.pagination__Pagination_ArrowItem} onClick={() => { next() }} />
     </Pagination>
   )
 }

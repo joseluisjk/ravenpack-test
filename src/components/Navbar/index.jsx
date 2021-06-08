@@ -7,7 +7,7 @@ import logo from '../../assets/img/RavenPack.svg';
 
 const NavBar = () => {
   return (
-    <Navbar className={styles.navBar__Container} bg="dark" variant="dark" expand="lg" fixed="top">
+    <Navbar className={styles.navBar__Container} variant="dark" expand="lg" fixed="top">
       <Navbar.Brand className={styles.navBar__Brand} href="/">
         <img src={logo} alt="RavenPack Logo" />
         <span>React test made by Jota</span>

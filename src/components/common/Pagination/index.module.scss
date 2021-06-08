@@ -1,4 +1,38 @@
 .pagination__Pagination {
   padding-top: 1rem;
   margin-bottom: 1rem;
+
+  .pagination__Pagination_Item {
+    a {
+      background-color: black;
+      color: #D3A533;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    span:first-of-type {
+      background-color: #D3A533;
+      color: black;
+      text-decoration: none;
+  
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .pagination__Pagination_ArrowItem {
+    a {
+      background-color: black;
+      color: #D3A533;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
 }

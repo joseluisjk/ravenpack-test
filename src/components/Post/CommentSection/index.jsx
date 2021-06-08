@@ -16,7 +16,7 @@ const CommentSection = (props) => {
           {
             comments.map(item => {
               return (
-                <Comment data={item} />
+                <Comment key={item.id} data={item} />
               )
             })
           }

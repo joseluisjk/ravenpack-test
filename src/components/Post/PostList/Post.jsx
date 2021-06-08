@@ -14,10 +14,7 @@ const Post = (props) => {
     <Col className={styles.postList__Preview} xs={10} key={id}>
       <Link
         to={{
-          pathname: `/post/${id}`,
-          state: {
-            postId: id
-          }
+          pathname: `/post/${id}`
         }}
       >
         <h2 className={styles.postList__Title}>{title}</h2>
@@ -31,10 +28,7 @@ const Post = (props) => {
               return (
                 <Link
                   to={{
-                    pathname: `/profile/${userId}`,
-                    state: {
-                      name: items.name
-                    }
+                    pathname: `/profile/${userId}`
                   }}
                   key={items.id}
                 >
