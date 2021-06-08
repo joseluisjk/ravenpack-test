@@ -1,0 +1,9 @@
+.navBar__Container {
+  justify-content: center;
+
+  .navBar__Brand {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
